@@ -1,0 +1,36 @@
+Step: build-step-credential-initializer-ngzfg:
+
+{"level":"warn","ts":1555492764.7390683,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1555492764.7396574,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-allons-y-environment-stagkiwi-s-x4w8b:
+
+{"level":"warn","ts":1555492765.8226333,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1555492766.525845,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/allons-y/environment-stagkiwi-staging\" @ \"8f1738eb742b2c028bf1ddc73a879959f92494dc\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-04-17T09:19:29Z" level=info msg="got "
+Using SHAs from PULL_REFS=master:58fee183e364286e6b1db2fe5727f02b221a1566,2:8f1738eb742b2c028bf1ddc73a879959f92494dc
+ran git fetch origin 8f1738eb742b2c028bf1ddc73a879959f92494dc: 58fee183e364286e6b1db2fe5727f02b221a1566: in 
+Unshallowed git repo in 
+ran git checkout master in 
+ran git reset --hard 58fee183e364286e6b1db2fe5727f02b221a1566 in 
+ran clean --force -d . in 
+ran git merge 8f1738eb742b2c028bf1ddc73a879959f92494dc in 
+Step: build-step-build-helm-build:
+
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080\n","time":"2019-04-17T09:19:32Z"}
+{"level":"info","msg":"Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io\n","time":"2019-04-17T09:19:34Z"}
+{"level":"info","msg":"Successfully added Helm repository chartmuseum.jenkins-x.io.\n","time":"2019-04-17T09:19:35Z"}
+{"level":"info","msg":"Adding missing Helm repo: jenkins-x-chartmuseum:8080 http://jenkins-x-chartmuseum:8080\n","time":"2019-04-17T09:19:35Z"}
+{"level":"info","msg":"Successfully added Helm repository jenkins-x-chartmuseum:8080.\n","time":"2019-04-17T09:19:35Z"}
+Step: build-step-source-mkdir-allons-y-environment-stagkiwi-s-qmq95:
+
+{"level":"warn","ts":1555492787.9990828,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1555492788.0300477,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /pvc/from-build-pack/workspace\""}
+Step: build-step-source-copy-allons-y-environment-stagkiwi-s-dwhl6:
+
+{"level":"warn","ts":1555492788.978093,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1555492788.9898727,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"cp -r /workspace/source/. /pvc/from-build-pack/workspace\""}
