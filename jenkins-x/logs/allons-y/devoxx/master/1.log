@@ -1,0 +1,119 @@
+Step: build-step-credential-initializer-vfgl6:
+
+{"level":"warn","ts":1555492377.3683853,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1555492377.3690975,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-allons-y-devoxx-master-tgb5h:
+
+{"level":"warn","ts":1555492380.0490775,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1555492380.7957923,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/allons-y/devoxx\" @ \"v0.0.1\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-04-17T09:14:16Z" level=info msg="got "
+Using SHAs from PULL_REFS=master:
+time="2019-04-17T09:14:16Z" level=warning msg="no SHAs to merge, falling back to initial cloned commit"
+Step: build-step-setup-**-git-credentials:
+
+{"level":"info","msg":"Generated Git credentials file /workspace/xdg_config/git/credentials\n","time":"2019-04-17T09:14:43Z"}
+Step: build-step-build-npm-install:
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.375s
+found 0 vulnerabilities
+
+Step: build-step-build-npm-test:
+
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+Step: build-step-build-container-build:
+
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E0417 09:14:51.558979      14 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0417 09:14:51.563772      14 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2019/04/17 09:14:51 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0001] Downloading base image node:9-slim           
+2019/04/17 09:14:52 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Executing 0 build triggers                   
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0002] Taking snapshot of full filesystem...        
+[36mINFO[0m[0002] ENV PORT 8080                                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] EXPOSE 8080                                  
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] WORKDIR /usr/src/app                         
+[36mINFO[0m[0002] cmd: workdir                                 
+[36mINFO[0m[0002] Changed working directory to /usr/src/app    
+[36mINFO[0m[0002] Creating directory /usr/src/app              
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0002] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] COPY . .                                     
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0002] CMD ["npm", "start"]                         
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+2019/04/17 09:14:53 pushed blob: sha256:fdb9f89237e1c614ae9c5783770d4eaefd7015379fbeda4dd7b4e703e44ba2d0
+2019/04/17 09:14:53 pushed blob: sha256:2b0bf1affdcad455d85b6547c83ab3731136807a100c8e9106924a706c413b8b
+2019/04/17 09:14:53 pushed blob: sha256:7858ee0c02b632603af04fadc4295019f8258b34766bf93713fa7bde3de95d13
+2019/04/17 09:14:54 pushed blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2019/04/17 09:14:54 pushed blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2019/04/17 09:14:54 pushed blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2019/04/17 09:14:55 pushed blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2019/04/17 09:14:55 pushed blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2019/04/17 09:14:55 10.51.248.61:5000/allons-y/devoxx:0.0.1: digest: sha256:af914da29b10dc86bb3118817845ee652b1a4837a452656be021a76b46579cf5 size: 1404
+Step: build-step-build-post-build:
+
+{"level":"info","msg":"no CVE provider running in the current ** namespace so skip adding image to be analysed","time":"2019-04-17T09:14:56Z"}
+Step: build-step-promote-changelog:
+
+{"level":"info","msg":"Converted /workspace/source/charts/devoxx to an unshallow repository\n","time":"2019-04-17T09:14:59Z"}
+{"level":"info","msg":"Generating change log from git ref fba4913f55f786b3bff16693bdf91adef2d327e5 =\u003e 1a948800515e487b94608e09520791db88c237eb\n","time":"2019-04-17T09:14:59Z"}
+{"level":"warning","msg":"Failed to enrich commits with issues: User.jenkins.io \"-0\" is invalid: metadata.name: Invalid value: \"-0\": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')\n","time":"2019-04-17T09:14:59Z"}
+{"level":"warning","msg":"Failed to enrich commits with issues: User.jenkins.io \"-0\" is invalid: metadata.name: Invalid value: \"-0\": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')\n","time":"2019-04-17T09:15:00Z"}
+{"level":"info","msg":"Finding issues in commit messages using git format\n","time":"2019-04-17T09:15:00Z"}
+{"level":"warning","msg":"No release found for allons-y/devoxx and tag v0.0.1 so creating a new release\n","time":"2019-04-17T09:15:00Z"}
+{"level":"info","msg":"Updated the release information at https://github.com/allons-y/devoxx/releases/tag/v0.0.1\n","time":"2019-04-17T09:15:01Z"}
+{"level":"info","msg":"generated: /workspace/source/charts/devoxx/templates/release.yaml\n","time":"2019-04-17T09:15:01Z"}
+{"level":"info","msg":"Created Release devoxx-0-0-1 resource in namespace **\n","time":"2019-04-17T09:15:01Z"}
+{"level":"info","msg":"Updating PipelineActivity allons-y-devoxx-master-1 with version 0.0.1\n","time":"2019-04-17T09:15:01Z"}
+{"level":"info","msg":"Updated PipelineActivities allons-y-devoxx-master-1 with release notes URL: https://github.com/allons-y/devoxx/releases/tag/v0.0.1\n","time":"2019-04-17T09:15:01Z"}
+Step: build-step-promote-helm-release:
+
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080\n","time":"2019-04-17T09:15:02Z"}
+{"level":"info","msg":"Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io\n","time":"2019-04-17T09:15:03Z"}
+{"level":"info","msg":"Successfully added Helm repository chartmuseum.jenkins-x.io.\n","time":"2019-04-17T09:15:04Z"}
+{"level":"info","msg":"Adding missing Helm repo: jenkins-x-chartmuseum:8080 http://jenkins-x-chartmuseum:8080\n","time":"2019-04-17T09:15:04Z"}
+{"level":"info","msg":"Successfully added Helm repository jenkins-x-chartmuseum:8080.\n","time":"2019-04-17T09:15:04Z"}
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080\n","time":"2019-04-17T09:15:04Z"}
+{"level":"info","msg":"Uploading chart file devoxx-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts\n","time":"2019-04-17T09:15:04Z"}
+{"level":"info","msg":"Received 201 response: {\"saved\":true}\n","time":"2019-04-17T09:15:04Z"}
+Step: build-step-promote-**-promote:
+
+{"level":"warning","msg":"prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410","time":"2019-04-17T09:15:06Z"}
+{"level":"info","msg":"Promoting app devoxx version 0.0.1 to namespace **-staging\n","time":"2019-04-17T09:15:06Z"}
+{"level":"warning","msg":"Waiting for the fork of captain**/environment-stagkiwi-staging to appear...\n","time":"2019-04-17T09:15:08Z"}
+{"level":"info","msg":"Forked Git repository to https://github.com/captainJX/environment-stagkiwi-staging\n\n","time":"2019-04-17T09:15:13Z"}
+{"level":"info","msg":"Created Pull Request: https://github.com/allons-y/environment-stagkiwi-staging/pull/1\n\n","time":"2019-04-17T09:15:18Z"}
+{"level":"info","msg":"Pull Request https://github.com/allons-y/environment-stagkiwi-staging/pull/1 is merged at sha 58fee183e364286e6b1db2fe5727f02b221a1566\n","time":"2019-04-17T09:16:22Z"}
+{"level":"info","msg":"Pull Request merged but we are not waiting for the update pipeline to complete!","time":"2019-04-17T09:16:22Z"}
+{"level":"warning","msg":"Could not find the service URL in namespace **-staging for names devoxx, **-devoxx, **-staging-devoxx\n","time":"2019-04-17T09:16:22Z"}
+Step: build-step-source-mkdir-allons-y-devoxx-master-p**ct:
+
+{"level":"warn","ts":1555492590.50879,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1555492590.5544295,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /pvc/from-build-pack/workspace\""}
+Step: build-step-source-copy-allons-y-devoxx-master-rltrm:
+
+{"level":"warn","ts":1555492591.908242,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1555492592.1808279,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"cp -r /workspace/source/. /pvc/from-build-pack/workspace\""}
